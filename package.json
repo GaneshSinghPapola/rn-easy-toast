@@ -1,0 +1,28 @@
+{
+  "name": "rn-toast",
+  "version": "1.0.0",
+  "description": "A simplified customizable react-native-toast with fade and slide animation with custom colors, position and button",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "toast",
+    "animation",
+    "custom",
+    "ios",
+    "android",
+    "notification"
+  ],
+  "dependencies": {
+    "react-native-root-siblings": "^4.0.6",
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
+      "react-native": ">=0.60.0"
+  },
+  "author": "Ganesh Singh Papola",
+  "license": "ISC"
+}
