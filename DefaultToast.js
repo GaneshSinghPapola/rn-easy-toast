@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Text, TouchableOpacity, Animated, Dimensions } from 'react-native';
-import PropTypes from 'prop-types';
 import Styles from "./sytles"
 const { width } = Dimensions.get('window')
 

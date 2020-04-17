@@ -6,6 +6,7 @@
 
 
 import React from "react";
+import PropTypes from 'prop-types';
 import WideToast from "./WideToast";
 import DefaultToast from "./DefaultToast";
 import RootSiblings from 'react-native-root-siblings';
@@ -26,6 +27,19 @@ const Toast = props => {
       sibling = null;
     }, delay+1000);
 }
+
+Container.propTypes = {
+  message  : PropTypes.string.isRequired,
+  delay : PropTypes.number,
+  textStyle : PropTypes.object,
+  borderRadius : PropTypes.number,
+  position : PropTypes.oneOf(['top', 'down']),
+  background : PropTypes.string,
+  button : PropTypes.object,
+  type : PropTypes.oneOf(['default', 'wide']),
+  animation : PropTypes.oneOf(['slideUpDown', 'slideLeft', 'slideRight'])
+};
+
 export default Toast;
 export const ToastContainer = props => {
   Toast(props);

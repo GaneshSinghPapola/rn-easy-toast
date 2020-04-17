@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { View, Text, TouchableOpacity, Animated, Dimensions } from 'react-native';
-import PropTypes from 'prop-types';
 import Styles from "./sytles"
 const { width } = Dimensions.get('window')
 
@@ -78,9 +77,9 @@ export default props => {
          { position === "bottom" && <View style={[Styles.spaceBottom]}/>}
       </Animated.View>
     )
-
-
 }
+
+
 
 
 
