@@ -60,9 +60,9 @@ export default {
     alignSelf : 'center' 
   },
   dbottom : {
-    top : "7%"
+    top : "85%"
   },
   dtop : {
-    top : "85%"
+    top : "7%"
   }
 }
