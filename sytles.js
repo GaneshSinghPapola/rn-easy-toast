@@ -1,17 +1,27 @@
+import { x, statusHeight } from "./tool"
 export default {
   toastView : {
-    alignItems : "center",
-    paddingHorizontal : 10,
     minHeight: 53,
-    maxHeight : 90,
+    maxHeight : 100,
     width:"100%", 
     position: 'absolute',
     zIndex: 9999,
-    flexDirection : 'row'
+  },
+  innerView : {
+    alignItems : "center",
+    flexDirection : 'row',
+    flex : 1,
+    paddingHorizontal : 10,
+    height : 60,
+  },
+  spaceBottom : {
+    height : x ? 15 : 5  
+  },
+  spaceTop : {
+    height :  x ? statusHeight : 5
   },
   top : {
-    top : 0, 
-    marginTop : 0,
+    top : 0,
   },
   bottom : {
     bottom : 0,

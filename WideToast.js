@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Text, TouchableOpacity, Animated, Dimensions } from 'react-native';
+import { View, Text, TouchableOpacity, Animated, Dimensions } from 'react-native';
 import PropTypes from 'prop-types';
 import Styles from "./sytles"
 const { width } = Dimensions.get('window')
@@ -18,14 +18,14 @@ const Button = props => {
 
 export default props => {
 
-  const { message="", delay=3000, textStyle={}, position="bottom", animation="slideDown", background="#121010", borderRadius = 0, button={} } = props;
+  const { message="", delay=3000, textStyle={}, position="bottom", animation="slideUpDown", background="#121010", borderRadius = 0, button={} } = props;
   let xvalue = animation==="slideLeft"? width : -width
     let animatedYValue = new Animated.Value(0), animatedXValue = new Animated.Value(xvalue),isBottom = position === "bottom",
-    animationValue = animation === "slideDown"?animatedYValue : animatedXValue,
+    animationValue = animation === "slideUpDown"?animatedYValue : animatedXValue,
     startValueY = isBottom ? 0 : 1, endValueY = isBottom ? 1 : 0, 
     startValueX = 0, endValueX = xvalue,
-    startValue = animation === "slideDown"? startValueY : startValueX,
-    endValue = animation === "slideDown"? endValueY : endValueX;
+    startValue = animation === "slideUpDown"? startValueY : startValueX,
+    endValue = animation === "slideUpDown"? endValueY : endValueX;
 
     let animationY = position==="bottom" ? animatedYValue.interpolate({
       inputRange: [0, .3, .5, .7, 1],
@@ -48,15 +48,19 @@ export default props => {
     }, delay);
   }
 
-  if (animation === "slideDown")
+  if (animation === "slideUpDown")
     return (
       <Animated.View style={[Styles.toastView, 
         {backgroundColor:background}, isBottom ? Styles.bottom : Styles.top, {borderRadius},
          { transform: [{ translateY: animationY }] }]}>
-        <Text numberOfLines={1} style={[Styles.toastText, textStyle]}>
-          {message}
-        </Text>
-        {Object.keys(button).length > 0 && <Button {...button} />}
+           { position === "top" && <View style={[Styles.spaceTop]}/>}
+           <View style={Styles.innerView}>
+              <Text numberOfLines={1} style={[Styles.toastText, textStyle]}>
+                {message}
+              </Text>
+              {Object.keys(button).length > 0 && <Button {...button} />}
+           </View>
+           { position === "bottom" && <View style={[Styles.spaceBottom]}/>}
       </Animated.View>
     )
   else
@@ -64,12 +68,17 @@ export default props => {
       <Animated.View style={[Styles.toastView,
         {backgroundColor:background}, isBottom ? Styles.bottom : Styles.top, {borderRadius},
         { transform: [{ translateX: animatedXValue }] }]}>
-        <Text numberOfLines={1} style={[Styles.toastText, textStyle]}>
-          {message}
-        </Text>
-        {Object.keys(button).length > 0 && <Button {...button} />}
+          { position === "top" && <View style={[Styles.spaceTop]}/>}
+         <View style={Styles.innerView}>
+           <Text numberOfLines={1} style={[Styles.toastText, textStyle]}>
+              {message}
+            </Text>
+           {Object.keys(button).length > 0 && <Button {...button} />}
+         </View>
+         { position === "bottom" && <View style={[Styles.spaceBottom]}/>}
       </Animated.View>
     )
+
 
 }
 
