@@ -1,6 +1,6 @@
 {
   "name": "rn-easy-toast",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simplified customizable react native toast with fade and slide animation with custom colors, positions and a button",
   "main": "index.js",
   "scripts": {
