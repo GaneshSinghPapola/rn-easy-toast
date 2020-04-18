@@ -33,7 +33,7 @@ Container.propTypes = {
   delay : PropTypes.number,
   textStyle : PropTypes.object,
   borderRadius : PropTypes.number,
-  position : PropTypes.oneOf(['top', 'down']),
+  position : PropTypes.oneOf(['top', 'bottom']),
   background : PropTypes.string,
   button : PropTypes.object,
   type : PropTypes.oneOf(['default', 'wide']),
