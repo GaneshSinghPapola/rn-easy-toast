@@ -1,4 +1,4 @@
-# rn-toast
+# rn-easy-toast
 A react native simple toast module to show animated or default types of toast in android and iOS.
 
 
@@ -6,15 +6,16 @@ A react native simple toast module to show animated or default types of toast in
 
 ## Installation
 
-* 1.Run `npm i rn-toast --save` or `yarn add rn-toast`
-* 2.`import Toast from 'rn-toast'`    
+* 1.Run `npm i rn-easy-toast --save` or `yarn add rn-easy-toast`
+* 2.`import Toast from 'rn-easy-toast'`    
 
 ## Demo  
 
+<img src="https://user-images.githubusercontent.com/11535790/79632280-00594680-817c-11ea-9156-c4c690a7c125.gif" width="250" height="500" />
 
 ## Example    
 
-`import Toast, { ToastContainer } from 'rn-toast'`  
+`import Toast, { ToastContainer } from 'rn-easy-toast'`  
 
 Use Toast method to show toast   
 

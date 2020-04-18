@@ -1,7 +1,7 @@
 {
-  "name": "rn-toast",
+  "name": "rn-easy-toast",
   "version": "1.0.0",
-  "description": "A simplified customizable react-native-toast with fade and slide animation with custom colors, position and button",
+  "description": "A simplified customizable react native toast with fade and slide animation with custom colors, positions and a button",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
