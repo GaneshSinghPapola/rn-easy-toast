@@ -41,7 +41,7 @@ Toast({
     background : "#8ad2ff", 
     borderRadius : 5
   }
-})
+});
 
 ```
 
