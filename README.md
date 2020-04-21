@@ -23,8 +23,28 @@ Use Toast method to show toast
 Toast({
   message : "Hii this is  test Toast!",
   delay : 5000
-})
+});
+
 ```
+Use with a button 
+
+```
+Toast({
+  message : "Please try again",
+  delay : 5000,
+  position : "bottom",
+  type : "wide",
+  animation : "slideUpDown",
+  button : {
+    title : "retry",
+    onPress = ()=>alert("retry pressed"),
+    background : "#8ad2ff", 
+    borderRadius : 5
+  }
+})
+
+```
+
 or use toast as a container with `ToastContainer` anywhere inside the component
 
 ```
@@ -47,7 +67,7 @@ animation  | string one of (['slideUpDown','slideRight', slideLeft])  | true | s
 background  | string  | true | '#121010'  |   toast background color
 borderRadius  | number  | true | 100  |   border radius ( default 0 for type wide)
 textStyle  | style  | true | { color:'#8ad2ff' }  |   custom style text
-button | object | true | {} | to show button on toast ex. { titile : "button", onpress=()=>{}, background : "#8ad2ff", borderRadius : 5, textStyle : {} }
+button | object | true | {} | to show button on toast ex. { title : "button", onPress=()=>{}, background : "#8ad2ff", borderRadius : 5, textStyle : {} }
 
    
 
